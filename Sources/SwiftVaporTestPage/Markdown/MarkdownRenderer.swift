@@ -8,7 +8,7 @@ import Markdown
 /// - Markdown内のHTMLはそのまま出力する（rehype-raw）
 /// - `/` から始まるリンクと画像には、サイトの公開パス（`basePath`）を付ける
 struct MarkdownRenderer: Sendable {
-    /// サイトの公開パス（例：`/swift-vapor-test-page`。ルートに置く場合は空）
+    /// サイトの公開パス（例：`/vapor-test-page`。ルートに置く場合は空）
     var basePath: String = ""
     /// 画像（`![]()`）に付けるクラス
     var imageClass: String? = nil

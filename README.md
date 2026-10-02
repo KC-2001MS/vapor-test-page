@@ -28,8 +28,8 @@ swift test
 # 静的なファイルを dist/ に書き出す
 swift run SwiftVaporTestPage export
 
-# GitHub Pages と同じく /swift-vapor-test-page/ 以下に置く前提で書き出す
-SITE_BASE_PATH=/swift-vapor-test-page swift run SwiftVaporTestPage export
+# GitHub Pages と同じく /vapor-test-page/ 以下に置く前提で書き出す
+SITE_BASE_PATH=/vapor-test-page swift run SwiftVaporTestPage export
 ```
 
 | 環境変数 | 内容 |

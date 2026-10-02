@@ -5,7 +5,7 @@ struct SiteConfiguration: Sendable {
     /// 本番サイトのURL（canonical・OGPのURLに使う）
     static let siteURL = "https://iroiro.dev"
 
-    /// サイトを置くパス（例：`/swift-vapor-test-page`。ルートに置く場合は空）
+    /// サイトを置くパス（例：`/vapor-test-page`。ルートに置く場合は空）
     /// GitHub Pagesのプロジェクトサイトはリポジトリ名のパスに公開されるため、リンクや画像のURLの先頭に付ける
     var basePath: String
     /// Google AnalyticsのID（未設定なら計測用のスクリプトを出力しない）
@@ -19,7 +19,7 @@ struct SiteConfiguration: Sendable {
         )
     }
 
-    /// `/` で始まり、`/` で終わらない形にする（`swift-vapor-test-page/` → `/swift-vapor-test-page`）
+    /// `/` で始まり、`/` で終わらない形にする（`vapor-test-page/` → `/vapor-test-page`）
     static func normalize(basePath: String) -> String {
         let trimmed = basePath.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         return trimmed.isEmpty ? "" : "/" + trimmed
