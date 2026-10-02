@@ -80,5 +80,5 @@ swift-markdown が対応していない脚注（`[^1]`）は、解析の前に�
 
 ## GitHub Pages への公開
 
-`master` ブランチに push すると、GitHub Actions（`.github/workflows/pages.yml`）がテスト・書き出し・公開を行います。
+`main` ブランチに push すると、GitHub Actions（`.github/workflows/pages.yml`）がテスト・書き出し・公開を行います。
 リポジトリの Settings → Pages → Build and deployment の Source を「GitHub Actions」にしておく必要があります。
