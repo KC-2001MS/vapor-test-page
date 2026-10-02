@@ -3,7 +3,7 @@ import Vapor
 
 /// サイトを静的なファイルとして書き出す（GitHub Pages用）
 ///
-///     swift run SwiftVaporTestPage export [--output dist]
+///     swift run VaporTestPage export [--output dist]
 ///
 /// サーバーと同じルートに内部でリクエストを送り、返ってきたHTMLをファイルに保存する。
 /// そのため、`swift run` で確認したページと書き出したページは同じ内容になる。

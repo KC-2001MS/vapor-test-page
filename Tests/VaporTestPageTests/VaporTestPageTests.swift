@@ -1,4 +1,4 @@
-@testable import SwiftVaporTestPage
+@testable import VaporTestPage
 import VaporTesting
 import Testing
 
@@ -102,7 +102,7 @@ struct SiteTests {
     func basePath() {
         #expect(SiteConfiguration.normalize(basePath: "") == "")
         #expect(SiteConfiguration.normalize(basePath: "/") == "")
-        #expect(SiteConfiguration.normalize(basePath: "swift-vapor-test-page/") == "/swift-vapor-test-page")
+        #expect(SiteConfiguration.normalize(basePath: "vapor-test-page/") == "/vapor-test-page")
     }
 }
 

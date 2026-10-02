@@ -1,4 +1,4 @@
-# SwiftVaporTestPage
+# VaporTestPage
 
 [いろいろポートフォリオ（iroiro.dev）](https://iroiro.dev)を、Vapor と Leaf でどこまで再現できるかを試す検証用のページです。
 本番サイトを置き換える予定はありません。
@@ -7,7 +7,7 @@ Vapor はサーバーとして動かすフレームワークですが、GitHub P
 そこで、ビルド時に Vapor を起動して各ページを HTML に書き出し、そのファイルを GitHub Pages に公開します。
 
 - 開発中は `swift run` でサーバーを起動し、ブラウザで確認する
-- 公開時は `swift run SwiftVaporTestPage export` で `dist/` に静的なファイルを書き出す
+- 公開時は `swift run VaporTestPage export` で `dist/` に静的なファイルを書き出す
 
 書き出しは、サーバーと同じルートに内部でリクエストを送り、返ってきた HTML を保存しています。
 そのため、サーバーで確認したページと公開されるページは同じ内容になります。
@@ -26,10 +26,10 @@ swift run
 swift test
 
 # 静的なファイルを dist/ に書き出す
-swift run SwiftVaporTestPage export
+swift run VaporTestPage export
 
 # GitHub Pages と同じく /vapor-test-page/ 以下に置く前提で書き出す
-SITE_BASE_PATH=/vapor-test-page swift run SwiftVaporTestPage export
+SITE_BASE_PATH=/vapor-test-page swift run VaporTestPage export
 ```
 
 | 環境変数 | 内容 |
@@ -60,10 +60,10 @@ CSS（`Public/css/`）も元サイトのものを使っています。CSS Module
 
 | ファイル | 内容 |
 | ---- | ---- |
-| `Sources/SwiftVaporTestPage/Controllers/SiteController.swift` | すべてのページのルートと、書き出すパスの一覧 |
-| `Sources/SwiftVaporTestPage/Commands/ExportCommand.swift` | 静的なファイルを書き出す `export` コマンド |
-| `Sources/SwiftVaporTestPage/Markdown/` | Markdown から HTML への変換（swift-markdown を使用） |
-| `Sources/SwiftVaporTestPage/Content/` | `Content/` の Markdown・JSON の読み込み |
+| `Sources/VaporTestPage/Controllers/SiteController.swift` | すべてのページのルートと、書き出すパスの一覧 |
+| `Sources/VaporTestPage/Commands/ExportCommand.swift` | 静的なファイルを書き出す `export` コマンド |
+| `Sources/VaporTestPage/Markdown/` | Markdown から HTML への変換（swift-markdown を使用） |
+| `Sources/VaporTestPage/Content/` | `Content/` の Markdown・JSON の読み込み |
 | `Resources/Views/` | Leaf のテンプレート |
 | `.github/workflows/pages.yml` | テスト・書き出し・GitHub Pages への公開 |
 

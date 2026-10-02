@@ -22,6 +22,6 @@ public func configure(_ app: Application) async throws {
     // register routes
     try routes(app)
 
-    // 静的なHTMLを書き出すコマンド（swift run SwiftVaporTestPage export）
+    // 静的なHTMLを書き出すコマンド（swift run VaporTestPage export）
     app.asyncCommands.use(ExportCommand(), as: "export")
 }

@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftVaporTestPage",
+    name: "VaporTestPage",
     platforms: [
        .macOS(.v13)
     ],
@@ -18,7 +18,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "SwiftVaporTestPage",
+            name: "VaporTestPage",
             dependencies: [
                 .product(name: "Leaf", package: "leaf"),
                 .product(name: "Vapor", package: "vapor"),
@@ -29,9 +29,9 @@ let package = Package(
             swiftSettings: swiftSettings
         ),
         .testTarget(
-            name: "SwiftVaporTestPageTests",
+            name: "VaporTestPageTests",
             dependencies: [
-                .target(name: "SwiftVaporTestPage"),
+                .target(name: "VaporTestPage"),
                 .product(name: "VaporTesting", package: "vapor"),
             ],
             swiftSettings: swiftSettings

@@ -40,7 +40,7 @@ jobs:
       # プロジェクトサイトは https://<ユーザー>.github.io/<リポジトリ名>/ に公開されるため、リポジトリ名を公開パスにする
       # テストでビルドしたデバッグ版をそのまま使う（リリースビルドより短時間で済む）
       - name: Export static site
-        run: swift run SwiftVaporTestPage export --output dist
+        run: swift run VaporTestPage export --output dist
         env:
           SITE_BASE_PATH: /${{ github.event.repository.name }}
 
