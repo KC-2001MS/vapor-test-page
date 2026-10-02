@@ -1,0 +1,387 @@
+{
+  "apps": {
+    "development": [
+      {
+        "id": "id6760347335",
+        "title": "ATP Nexus",
+        "icon": "/images/ATP Nexus Light.avif",
+        "darkIcon": "/images/ATP Nexus Dark.avif",
+        "description": "ATP Nexusは、AT Protocolに準拠したSNS Blueskyを利用するためのクライアントアプリです。フィードやリストを自由に楽しめ、マルチアカウントやHandoff、WidgetなどAppleデバイスに最適化された機能を備えています。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26.1"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26.1"
+          },
+          {
+            "os": "visionOS",
+            "version": "26.1"
+          },
+          {
+            "os": "macOS",
+            "version": "26.1(Tahoe)"
+          },
+          {
+            "os": "watchOS",
+            "version": "26.1"
+          }
+        ],
+        "supportPage": "./product/atpnexus",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6755629616",
+        "title": "FileSprout",
+        "icon": "/images/FileSprout Light.avif",
+        "darkIcon": "/images/FileSprout Dark.avif",
+        "description": "FileSproutは、好きな名前と拡張子の空のファイルをメニューバーから作成できるアプリです。ドラッグアンドドロップやクリップボードへのコピーで、作ったファイルを必要な場所へすぐに追加できます。",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/filesprout",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6743005902",
+        "title": "SSH Key Wallet",
+        "icon": "/images/SSH Key Wallet Light.avif",
+        "darkIcon": "/images/SSH Key Wallet Dark.avif",
+        "description": "SSH Key Walletは、OpenSSHをベースとした~/.ssh/内のSSH暗号鍵とSSH Configファイルを最も簡単に管理する方法です。",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "supportPage": "./product/sshkeywallet",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6477782786",
+        "title": "日本企業情報",
+        "icon": "/images/Japan Corp Info Light.avif",
+        "darkIcon": "/images/Japan Corp Info Dark.avif",
+        "description": "日本企業情報は、日本の法人情報を簡単に管理する最適な方法です。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26"
+          },
+          {
+            "os": "visionOS",
+            "version": "26"
+          },
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/japancorpinfo",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6470128646",
+        "title": "麻雀牌コンバータ",
+        "icon": "/images/Mahjong Tile Converter Light.avif",
+        "darkIcon": "/images/Mahjong Tile Converter Dark.avif",
+        "description": "麻雀牌コンバータは、MPSZ形式で表現された牌姿をUnicodeを用いたグラフィカルな表記に変換します。",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/mahjongtileconverter",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6450119338",
+        "title": "My Word X",
+        "icon": "/images/My Word X Light.avif",
+        "darkIcon": "/images/My Word X Dark.avif",
+        "description": "My Word Xは、オリジナルな単語帳を作成するアプリケーションです。様々な情報を登録できるため、より詳しくその単語を覚えることができます。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "17.4"
+          },
+          {
+            "os": "iPadOS",
+            "version": "17.4"
+          },
+          {
+            "os": "visionOS",
+            "version": "1.1"
+          },
+          {
+            "os": "macOS",
+            "version": "14.4(Sonoma)"
+          },
+          {
+            "os": "watchOS",
+            "version": "10.4"
+          },
+          {
+            "os": "tvOS",
+            "version": "17.4"
+          }
+        ],
+        "supportPage": "./product/mywordx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id1668831130",
+        "title": "Word Filter X",
+        "icon": "/images/Word Filter X Light.avif",
+        "darkIcon": "/images/Word Filter X Dark.avif",
+        "description": "Word Filter XはSafariのWebサイト上の苦手な言葉を隠すアプリケーションです。Safari上の苦手な言葉を隠すことで、自身の心を穏やかにすることができます。このアプリはブラウザ拡張機能とiOSアプリの「ひよこフィルター」をベースに設定の同期機能や置き換える単語を変更する機能など機能を追加した派生版です。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "17"
+          },
+          {
+            "os": "iPadOS",
+            "version": "17"
+          },
+          {
+            "os": "visionOS",
+            "version": "1"
+          },
+          {
+            "os": "macOS",
+            "version": "14(Sonoma)"
+          }
+        ],
+        "supportPage": "./product/wordfilterx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6446932202",
+        "title": "Uncheck X",
+        "icon": "/images/Uncheck X Light.avif",
+        "darkIcon": "/images/Uncheck X Dark.avif",
+        "description": "物を買うときやあるサービスのアカウントを作るとき、自分が同意していない項目に勝手にチェックがつけられていたことはありませんか。Uncheck Xをインストールすれば、いつの間にかメールマガジンが送られることはありません。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "18"
+          },
+          {
+            "os": "iPadOS",
+            "version": "18"
+          },
+          {
+            "os": "visionOS",
+            "version": "2"
+          },
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "supportPage": "./product/uncheckx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id1612026794",
+        "title": "Simple Editor X",
+        "icon": "/images/Simple Editor X Light.avif",
+        "darkIcon": "/images/Simple Editor X Dark.avif",
+        "description": "Simple Editor Xは、テキストファイルとして保存することができるシンプルなメモ帳・テキストエディタです。最低限の機能を持つテキストエディターですが、音声の読み上げ機能や定型文の挿入機能があります。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26"
+          },
+          {
+            "os": "visionOS",
+            "version": "26"
+          },
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/simpleeditorx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      }
+    ],
+    "transplanting": [
+      {
+        "id": "id1672080999",
+        "title": "Death To _blank",
+        "icon": "/images/Death To _blank Light.avif",
+        "darkIcon": "/images/Death To _blank Dark.avif",
+        "description": "リンクをクリックしたらタブが増えた経験はありませんか。リンクを新規タブで開く原因である_blank属性をWebサイトから取り除くことで、この現象を無くしてタブをスッキリさせます。この拡張機能は、\"Death To _blank\"拡張機能をSafari拡張機能として移植したバージョンとなります。この拡張機能のコードは、開発者との合意に基づいて利用されています。※ 新規タブを開く効果がある_blank以外の属性でも動作します。",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "18"
+          },
+          {
+            "os": "iPadOS",
+            "version": "18"
+          },
+          {
+            "os": "visionOS",
+            "version": "2"
+          },
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "media": [
+          {
+            "title": "Mac Fan",
+            "url": "https://books.google.co.jp/books?id=7E_HEAAAQBAJ&pg=PA131&lpg=PA131&dq=Keisuke+Chinone&source=bl&ots=-VqKdV3EKn&sig=ACfU3U3dAboshCgCcqkN2BbWpcwA6YvOYg&hl=ja&sa=X&ved=2ahUKEwiT646nmreAAxXgglYBHb2MANQQ6AF6BAgREAI#v=onepage&q=Keisuke%20Chinone&f=false"
+          }
+        ],
+        "supportPage": "./product/deathto_blank",
+        "feedback": "mailto:iroiro.work1234@gmail.com",
+        "originalSource": {
+          "platform": "Chrome",
+          "url": "https://chrome.google.com/webstore/detail/death-to-blank/gneobebnilffgkejpfhlgkmpkipgbcno?gl=JP&hl=ja",
+          "supportEmail": "jbarker@jbarker.net"
+        }
+      }
+    ],
+    "translation": [
+      {
+        "id": "id1574021257",
+        "title": "Declutter for Safari",
+        "description": "Declutter for Safariは軽量の拡張機能で重複したタブを自動的に閉じることができます。質問とフィードバックがございましたら、 英語で連絡をお願いします。",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "11.1(Big Sur)"
+          }
+        ],
+        "media": [
+          {
+            "title": "Mac Fan",
+            "url": "https://book.mynavi.jp/macfan/detail_summary/id=124346"
+          }
+        ],
+        "supportPage": "https://github.com/brandonlee503/DeclutterInfo",
+        "feedback": "mailto:declutterappextension@gmail.com"
+      }
+    ]
+  },
+  "others": [
+    {
+      "id": "word-filter-x-templates",
+      "title": "Word-Filter-X-Templates",
+      "label": "テンプレート",
+      "description": "Word Filter Xの設定データのテンプレートサイト。",
+      "repositoryUrl": "https://iroiro.dev/Word-Filter-X-Templates/",
+      "downloadUrl": "https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip"
+    },
+    {
+      "id": "swift-feed",
+      "title": "Swift",
+      "label": "Blueskyフィード",
+      "description": "Swift言語に関連する情報を提供するフィードです。",
+      "moreInfoUrl": "./product/bluesky_swift-feed"
+    },
+    {
+      "id": "swift-goggle",
+      "title": "Swift",
+      "label": "Brave Goggle",
+      "description": "Swift言語に関連する情報を提供するGoggleです。",
+      "moreInfoUrl": "./product/brave_swift-goggle"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "swift-window-launcher",
+      "title": "SwiftWindowLauncher",
+      "description": "CLIやmain関数から簡単にウインドウを開くことができるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftWindowLauncher"
+    },
+    {
+      "id": "information",
+      "title": "Information",
+      "description": "マクロを用いてInfo.plistの値に型安全にアクセスできるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/Information"
+    },
+    {
+      "id": "animated-image",
+      "title": "AnimatedImage",
+      "description": "SwiftUIでGIF・APNG・アニメーションWebPを表示するためのパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/AnimatedImage"
+    },
+    {
+      "id": "swift-storage",
+      "title": "SwiftStorage",
+      "description": "Userdefaultsによる永続化に対応したObservationのコードを生成するマクロ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftStorage"
+    },
+    {
+      "id": "hashify",
+      "title": "Hashify",
+      "description": "文字列リテラルに対してコンパイル時のハッシュ機能を提供するマクロ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/Hashify"
+    },
+    {
+      "id": "swift-li",
+      "title": "SwiftLI",
+      "description": "コマンドラインツールのCUIを簡単に作成することができるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftLI"
+    },
+    {
+      "id": "onboarding-ui",
+      "title": "OnboardingUI",
+      "description": "SwiftUIで簡単にオンボーディングを作成するためのパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/OnboardingUI"
+    },
+    {
+      "id": "about-ui",
+      "title": "AboutUI",
+      "description": "SwiftUIでmacOSのアプリについてのウインドウを作成するためのパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/AboutUI"
+    },
+    {
+      "id": "article-ui",
+      "title": "ArticleUI",
+      "description": "SwiftUIのListのように記事のUIを作成できるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/ArticleUI"
+    }
+  ],
+  "shellScripts": [
+    {
+      "id": "shell-config-setup",
+      "title": "Shell-Config-Setup",
+      "description": "OSの設定とアプリのダウンロードを簡単に行うシェルスクリプト。",
+      "repositoryUrl": "https://github.com/KC-2001MS/Shell-Config-Setup",
+      "downloadUrl": "https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip"
+    }
+  ],
+  "websites": [
+    {
+      "id": "iroiro-portfolio",
+      "title": "いろいろポートフォリオ",
+      "description": "こちらのホームページです。公開したサービスの紹介とサポート等を目的としたサイトです。Webアプリケーションに詳しくなく、今後もメインとする予定がないため最低限の作りとなっております。このホームページを頻繁に更新する予定はありませんが、フィードバックが多ければ対応します。"
+    }
+  ],
+  "trademarkNotices": [
+    "ＤＭＭは合同会社ＤＭＭ．ｃｏｍの商標もしくは商標登録です。",
+    "ＦＡＮＺＡは株式会社デジタルコマースの商標もしくは商標登録です。",
+    "楽天は楽天グループ株式会社の商標もしくは商標登録です。"
+  ]
+}

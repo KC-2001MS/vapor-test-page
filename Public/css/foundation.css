@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/* スクロールバーが常に表示される設定では、スクロールできるページとできないページ（トップ）で中央揃えの位置がずれるため、幅を常に確保する */
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, sans-serif;
+    font-display: swap;
+}
+
+header,
+footer {
+    text-align: center;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 195px);
+    padding: 5px 0 10px 0;
+    width: 100%;
+}
+
+ul.tabContainaer {
+    padding: 0;
+    margin: 0 auto
+}
+
+li.tab {
+    display: inline-block;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 85px;
+}
+
+.underline::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.underline:hover::after {
+    transform: scale(1, 1);
+}
+
+a {
+    color: var(--linkNotVisited);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--linkVisited);
+}
+
+h1 {
+    font-size: var(--h1size);
+}
+
+h2 {
+    font-size: var(--h2size);
+}
+
+h3 {
+    font-size: var(--h3size);
+}
+
+h4 {
+    font-size: var(--h4size);
+}
+
+p {
+    font-size: var(--psize);
+}
+
+/* 区切り線（h2の下線と同じく、文字色を薄くした線） */
+hr {
+    margin: 3em 0 10px 0;
+    border: none;
+    border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
+/* 注釈（本文より控えめな色） */
+.caption {
+    font-size: 10px;
+    color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+#copyright {
+    display: block;
+    font-size: var(--h5size);
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* Material Symbols（Google Fonts）のうち、サイトで使うアイコンだけを含むフォントをサイト内から配信する */
+/* 外部のCSSを読み込むと描画が遅れるため。アイコンを追加したときは、icon_namesに名前を足して取得し直す */
+/* https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=apps,article,check,contact_page,content_copy,home,newspaper&display=block */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(../fonts/material-symbols-outlined-subset.woff2) format('woff2');
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* アイコンの下のラベル（以前はh4だったため、同じ見た目になるようにしている） */
+.iconLabel {
+    display: block;
+    margin: 1.33em 0;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 540px) or (orientation: portrait) {
+    .landscape-only {
+        display: none;
+    }
+
+    li.tab {
+        width: 55px;
+
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 540px) and (orientation: landscape) {
+    .portrait-only {
+        display: none;
+    }
+
+    li.tab {
+        width: 110px;
+        margin: 10px 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    div#maincard {
+        flex: 1;
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    div#maincard {
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--erLight);
+    }
+
+    header,
+    footer,
+    .header,
+    .footer {
+        color: var(--defaultBlack);
+        flex-shrink: 0;
+    }
+
+    .header:visited,
+    .footer:visited {
+        color: var(--defaultBlack);
+    }
+
+    main {
+        background-color: var(--defaultWhite);
+        color: var(--defaultBlack);
+    }
+
+    .underline::after {
+        background: var(--defaultBlack);
+    }
+
+    .isDarkMode {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--erDark);
+    }
+
+    header,
+    footer,
+    .header,
+    .footer {
+        color: var(--defaultWhite);
+    }
+
+    .header:visited,
+    .footer:visited {
+        color: var(--defaultWhite);
+    }
+
+    main {
+        background-color: var(--defaultBlack);
+        color: var(--defaultWhite);
+    }
+
+    .underline::after {
+        background: var(--defaultWhite);
+    }
+
+    .isLightMode {
+        display: none;
+    }
+
+}

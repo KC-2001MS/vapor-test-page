@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+:root {
+    --defaultBlack: rgb(25, 25, 25, 1);
+    --defaultWhite: rgb(230, 230, 230, 1);
+    --erDark: rgb(55, 55, 55, 1);
+    --erLight: rgb(200, 200, 200, 1);
+    --linkNotVisited: rgb(100, 100, 255);
+    --linkVisited: rgb(127.5, 100, 127.5);
+    --accentColor1: rgb(200, 100, 100);
+    --accentColor2: rgb(100, 200, 100);
+    --accentColor3: rgb(100, 100, 200);
+    --accentColor4: rgb(200, 200, 100);
+    --accentColor5: rgb(200, 100, 200);
+    --accentColor6: rgb(100, 200, 200);
+    --cardDark: rgb(55, 55, 55, 1);
+    --cardLight: rgb(200, 200, 200, 1);
+    --cardDarkVisited: rgb(45, 45, 45, 1);
+    --cardLightVisited: rgb(210, 210, 210, 1);
+    /* カード・表・コードブロック共通の面（ライト・ダークどちらでも背景より少しだけ浮いた面になる） */
+    --cornerRadius: 16px;
+    --surfaceBackground: color-mix(in srgb, currentColor 6%, transparent);
+    --surfaceBorder: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --h1size: 35px;
+        --h2size: 30px;
+        --h3size: 22px;
+        --h4size: 18px;
+        --psize: 16px;
+        --h5size: 12px;
+    }
+}
+
+@media (max-width: 799px) {
+    :root {
+        --h1size: 30px;
+        --h2size: 26px;
+        --h3size: 20px;
+        --h4size: 17px;
+        --psize: 16px;
+        --h5size: 12px;
+    }
+}

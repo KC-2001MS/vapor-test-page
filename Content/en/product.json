@@ -1,0 +1,355 @@
+{
+  "apps": {
+    "development": [
+      {
+        "id": "id6760347335",
+        "title": "ATP Nexus",
+        "icon": "/images/ATP Nexus Light.avif",
+        "darkIcon": "/images/ATP Nexus Dark.avif",
+        "description": "ATP Nexus is a client app for Bluesky, the social network built on the AT Protocol. Enjoy your feeds and lists freely, with features optimized for Apple devices such as multiple accounts, Handoff and widgets.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26.1"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26.1"
+          },
+          {
+            "os": "visionOS",
+            "version": "26.1"
+          },
+          {
+            "os": "macOS",
+            "version": "26.1(Tahoe)"
+          },
+          {
+            "os": "watchOS",
+            "version": "26.1"
+          }
+        ],
+        "supportPage": "./product/atpnexus",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6755629616",
+        "title": "FileSprout",
+        "icon": "/images/FileSprout Light.avif",
+        "darkIcon": "/images/FileSprout Dark.avif",
+        "description": "FileSprout is a menu bar app that creates empty files with any name and extension. Add them right where you need them by dragging and dropping or copying them to the clipboard.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/filesprout",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6743005902",
+        "title": "SSH Key Wallet",
+        "icon": "/images/SSH Key Wallet Light.avif",
+        "darkIcon": "/images/SSH Key Wallet Dark.avif",
+        "description": "SSH Key Wallet is the easiest way to manage SSH encryption keys and SSH Config files in ~/.ssh/ based on OpenSSH.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "supportPage": "./product/sshkeywallet",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6470128646",
+        "title": "Mahjong Tile Converter",
+        "icon": "/images/Mahjong Tile Converter Light.avif",
+        "darkIcon": "/images/Mahjong Tile Converter Dark.avif",
+        "description": "Mahjong Tile Converter converts tiles represented in MPSZ format into a graphical representation using Unicode.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/mahjongtileconverter",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6450119338",
+        "title": "My Word X",
+        "icon": "/images/My Word X Light.avif",
+        "darkIcon": "/images/My Word X Dark.avif",
+        "description": "My Word X is an application to create an original word book. You can register various information so that you can memorize the word in more detail.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "17.4"
+          },
+          {
+            "os": "iPadOS",
+            "version": "17.4"
+          },
+          {
+            "os": "visionOS",
+            "version": "1.1"
+          },
+          {
+            "os": "macOS",
+            "version": "14.4(Sonoma)"
+          },
+          {
+            "os": "watchOS",
+            "version": "10.4"
+          },
+          {
+            "os": "tvOS",
+            "version": "17.4"
+          }
+        ],
+        "supportPage": "./product/mywordx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id1668831130",
+        "title": "Word Filter X",
+        "icon": "/images/Word Filter X Light.avif",
+        "darkIcon": "/images/Word Filter X Dark.avif",
+        "description": "Word Filter X is an application that hides words you don't like on Safari websites. By hiding the words that you have difficulty with on Safari, you can put your own mind at ease. This app is a derivative of the browser extension and iOS app \"Hiyoko Filter(Support for Japanese language only)\" with additional features such as the ability to sync settings and change the words to be replaced.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "17"
+          },
+          {
+            "os": "iPadOS",
+            "version": "17"
+          },
+          {
+            "os": "visionOS",
+            "version": "1"
+          },
+          {
+            "os": "macOS",
+            "version": "14(Sonoma)"
+          }
+        ],
+        "supportPage": "./product/wordfilterx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id6446932202",
+        "title": "Uncheck X",
+        "icon": "/images/Uncheck X Light.avif",
+        "darkIcon": "/images/Uncheck X Dark.avif",
+        "description": "Have you ever checked items that you did not agree to when buying something or creating an account for a service? Uncheck X returns checkboxes and radio buttons that are selected by default on a Web site to the deselected state. This reduces the need to uncheck checkboxes and radio buttons that have been added without your permission. You will no longer receive the newsletter any time soon.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "18"
+          },
+          {
+            "os": "iPadOS",
+            "version": "18"
+          },
+          {
+            "os": "visionOS",
+            "version": "2"
+          },
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "supportPage": "./product/uncheckx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
+        "id": "id1612026794",
+        "title": "Simple Editor X",
+        "icon": "/images/Simple Editor X Light.avif",
+        "darkIcon": "/images/Simple Editor X Dark.avif",
+        "description": "Simple Editor X is a simple notepad and text editor that can be saved as a text file. Although it is a text editor with minimal features, it has a voice reading function and the ability to insert canned text.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26"
+          },
+          {
+            "os": "visionOS",
+            "version": "26"
+          },
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/simpleeditorx",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      }
+    ],
+    "transplanting": [
+      {
+        "id": "id1672080999",
+        "title": "Death To _blank",
+        "icon": "/images/Death To _blank Light.avif",
+        "darkIcon": "/images/Death To _blank Dark.avif",
+        "description": "Have you ever clicked on a link and had it open a new tab? This is often caused by links using the 'target=_blank' attribute. Death To _blank fixes this problem by removing the '_blank' attribute from links, meaning that most links will open in the current tab. This extension is a port of 'Death To _blank' for Chrome, and has been developed in collaboration with its author. 'Death To _blank' also removes a few other 'target' values that can cause links to open in new pages (e.g. \"blank\" and \"new\").",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "18"
+          },
+          {
+            "os": "iPadOS",
+            "version": "18"
+          },
+          {
+            "os": "visionOS",
+            "version": "2"
+          },
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "media": [
+          {
+            "title": "Mac Fan(Japanese magazine specializing in Apple products)",
+            "url": "https://books.google.co.jp/books?id=7E_HEAAAQBAJ&pg=PA131&lpg=PA131&dq=Keisuke+Chinone&source=bl&ots=-VqKdV3EKn&sig=ACfU3U3dAboshCgCcqkN2BbWpcwA6YvOYg&hl=ja&sa=X&ved=2ahUKEwiT646nmreAAxXgglYBHb2MANQQ6AF6BAgREAI#v=onepage&q=Keisuke%20Chinone&f=false"
+          }
+        ],
+        "supportPage": "./product/deathto_blank",
+        "feedback": "mailto:iroiro.work1234@gmail.com",
+        "originalSource": {
+          "platform": "Chrome",
+          "url": "https://chrome.google.com/webstore/detail/death-to-blank/gneobebnilffgkejpfhlgkmpkipgbcno?gl=US&hl=en",
+          "supportEmail": "jbarker@jbarker.net"
+        }
+      }
+    ],
+    "translation": [
+      {
+        "id": "id1574021257",
+        "title": "Declutter for Safari",
+        "description": "Declutter for Safari is a lightweight extension that automatically closes duplicate tabs.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "11.1(Big Sur)"
+          }
+        ],
+        "media": [
+          {
+            "title": "Mac Fan(Japanese magazine specializing in Apple products)",
+            "url": "https://book.mynavi.jp/macfan/detail_summary/id=124346"
+          }
+        ],
+        "supportPage": "https://github.com/brandonlee503/DeclutterInfo",
+        "feedback": "mailto:declutterappextension@gmail.com"
+      }
+    ]
+  },
+  "others": [
+    {
+      "id": "word-filter-x-templates",
+      "title": "Word-Filter-X-Templates",
+      "label": "Template",
+      "description": "Template site for Word Filter X configuration data.",
+      "repositoryUrl": "https://iroiro.dev/Word-Filter-X-Templates/",
+      "downloadUrl": "https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip"
+    },
+    {
+      "id": "swift-feed",
+      "title": "Swift",
+      "label": "Bluesky Feed",
+      "description": "This feed provides information related to the Swift language.",
+      "moreInfoUrl": "./product/bluesky_swift-feed"
+    },
+    {
+      "id": "swift-goggle",
+      "title": "Swift",
+      "label": "Brave Goggle",
+      "description": "This goggle provides information related to the Swift language.",
+      "moreInfoUrl": "./product/brave_swift-goggle"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "swift-window-launcher",
+      "title": "SwiftWindowLauncher",
+      "description": "Package that makes it easy to open windows from the CLI or the main function.",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftWindowLauncher"
+    },
+    {
+      "id": "information",
+      "title": "Information",
+      "description": "Package that provides type-safe access to Info.plist values using macros.",
+      "repositoryUrl": "https://github.com/KC-2001MS/Information"
+    },
+    {
+      "id": "animated-image",
+      "title": "AnimatedImage",
+      "description": "Package for displaying GIF, APNG and animated WebP images in SwiftUI.",
+      "repositoryUrl": "https://github.com/KC-2001MS/AnimatedImage"
+    },
+    {
+      "id": "swift-storage",
+      "title": "SwiftStorage",
+      "description": "Macro to generate Observation code for persistence by Userdefaults.",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftStorage"
+    },
+    {
+      "id": "hashify",
+      "title": "Hashify",
+      "description": "Macro that provides compile-time hashing functionality for string literals.",
+      "repositoryUrl": "https://github.com/KC-2001MS/Hashify"
+    },
+    {
+      "id": "swift-li",
+      "title": "SwiftLI",
+      "description": "A package that makes it easy to create a CUI for a command line tool.",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftLI"
+    },
+    {
+      "id": "onboarding-ui",
+      "title": "OnboardingUI",
+      "description": "Package for creating easy onboarding with SwiftUI.",
+      "repositoryUrl": "https://github.com/KC-2001MS/OnboardingUI"
+    },
+    {
+      "id": "about-ui",
+      "title": "AboutUI",
+      "description": "Package to create a window about macOS apps in SwiftUI.",
+      "repositoryUrl": "https://github.com/KC-2001MS/AboutUI"
+    },
+    {
+      "id": "article-ui",
+      "title": "ArticleUI",
+      "description": "A package that allows you to create a UI for articles like List in SwiftUI.",
+      "repositoryUrl": "https://github.com/KC-2001MS/ArticleUI"
+    }
+  ],
+  "shellScripts": [
+    {
+      "id": "shell-config-setup",
+      "title": "Shell-Config-Setup",
+      "description": "Shell scripts to easily configure the OS and download applications.",
+      "repositoryUrl": "https://github.com/KC-2001MS/Shell-Config-Setup",
+      "downloadUrl": "https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip"
+    }
+  ],
+  "websites": [
+    {
+      "id": "iroiro-portfolio",
+      "title": "Iroiro's portfolio",
+      "description": "This is the homepage. The purpose of this site is to introduce and support the services we have made available to the public. It is minimal because we are not familiar with web applications and do not plan to make it our main focus in the future. We do not plan to update this website frequently, but will respond if we get a lot of feedback."
+    }
+  ]
+}

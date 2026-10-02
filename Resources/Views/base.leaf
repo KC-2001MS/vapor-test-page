@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="#(site.lang)">
+<head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#(site.meta.title)</title>
+  <meta name="description" content="#(site.meta.description)">
+  <meta name="abstract" content="#(site.meta.description)">
+  <meta name="application-name" content="#(site.meta.applicationName)">
+  <meta name="author" content="#(site.meta.author)">
+  <link rel="author" href="https://iroiro.dev">
+  <meta name="creator" content="#(site.meta.author)">
+  <meta name="publisher" content="#(site.meta.author)">
+  <meta name="generator" content="Vapor">
+  #if(site.meta.keywordList != ""):<meta name="keywords" content="#(site.meta.keywordList)">#endif
+  #if(site.meta.indexable):<meta name="robots" content="index, follow">#else:<meta name="robots" content="noindex, nofollow">#endif
+  <link rel="canonical" href="#(site.meta.canonicalURL)">
+  <link rel="alternate" hreflang="ja" href="#(site.meta.japaneseURL)">
+  <link rel="alternate" hreflang="en" href="#(site.meta.englishURL)">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="#(site.meta.applicationName)">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  #if(site.meta.appID):<meta name="apple-itunes-app" content="app-id=#(site.meta.appID)">#endif
+  <meta property="og:title" content="#(site.meta.title)">
+  <meta property="og:description" content="#(site.meta.description)">
+  <meta property="og:url" content="#(site.meta.canonicalURL)">
+  <meta property="og:site_name" content="#(site.meta.siteName)">
+  <meta property="og:image" content="#(site.meta.imageURL)">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="#(site.meta.twitterCard)">
+  <meta name="twitter:site" content="@IroIro1234work">
+  <meta name="twitter:creator" content="@IroIro1234work">
+  <meta name="twitter:title" content="#(site.meta.title)">
+  <meta name="twitter:description" content="#(site.meta.description)">
+  <meta name="twitter:image" content="#(site.meta.imageURL)">
+  <link rel="icon" href="#(site.base)/favicon.ico">
+  <link rel="apple-touch-icon" href="#(site.base)/apple-touch-icon.png">
+  <link rel="preload" href="#(site.base)/fonts/material-symbols-outlined-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="#(site.base)/css/var.css">
+  <link rel="stylesheet" href="#(site.base)/css/foundation.css">
+  <link rel="stylesheet" href="#(site.base)/css/content.css">
+  <link rel="stylesheet" href="#(site.base)/css/home.css">
+  <link rel="stylesheet" href="#(site.base)/css/page-card.css">
+  <link rel="stylesheet" href="#(site.base)/css/product.css">
+  <meta name="date" content="#(site.date)">
+  <meta name="google" content="nositelinkssearchbox">
+  <meta name="language" content="#(site.languageName)">
+  <meta http-equiv="content-language" content="#(site.lang)">
+  <meta name="copyright" content="© 2024 Keisuke Chinone">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <meta http-equiv="Expires" content="604800">
+  <link rel="me" href="https://mastodon.social/@Iroiro">
+  #if(site.analyticsID):
+  <script async src="https://www.googletagmanager.com/gtag/js?id=#(site.analyticsID)"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '#(site.analyticsID)');
+  </script>
+  #endif
+  <script>
+    // スクロールバーの幅を測り、CSS変数（--scrollbarWidth）に入れる
+    // スクロールバーが常に表示される設定では、スクロールしないトップページと他のページで中央揃えの位置がずれるため、その補正に使う
+    (function () {
+      try {
+        var root = document.documentElement;
+        var probe = document.createElement("div");
+        probe.style.cssText = "position:absolute;top:-100px;width:100px;height:100px;overflow:scroll;visibility:hidden";
+        root.appendChild(probe);
+        root.style.setProperty("--scrollbarWidth", probe.offsetWidth - probe.clientWidth + "px");
+        root.removeChild(probe);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header id="header">
+    <a class="header" href="#(site.home)/">
+      <h1 class="header">#(site.t.siteTitle)</h1>
+    </a>
+    <ul class="tabContainaer landscape-only"><li class="tab underline"><a class="header" href="#(site.home)/">#(site.t.home)</a></li><li class="tab underline"><a class="header" href="#(site.home)/product">#(site.t.contents)</a></li><li class="tab underline"><a class="header" href="#(site.home)/blog">#(site.t.blog)</a></li><li class="tab underline"><a class="header" href="#(site.home)/newsroom">#(site.t.newsroom)</a></li><li class="tab underline"><a class="header" href="#(site.home)/contact">#(site.t.contact)</a></li></ul>
+    <ul class="tabContainaer portrait-only"><li class="tab underline"><a class="header" href="#(site.home)/"><span class="material-symbols-outlined">home</span><span class="iconLabel">#(site.t.home)</span></a></li><li class="tab underline"><a class="header" href="#(site.home)/product"><span class="material-symbols-outlined">apps</span><span class="iconLabel">#(site.t.contents)</span></a></li><li class="tab underline"><a class="header" href="#(site.home)/blog"><span class="material-symbols-outlined">article</span><span class="iconLabel">#(site.t.blog)</span></a></li><li class="tab underline"><a class="header" href="#(site.home)/newsroom"><span class="material-symbols-outlined">newspaper</span><span class="iconLabel">#(site.t.newsroom)</span></a></li><li class="tab underline"><a class="header" href="#(site.home)/contact"><span class="material-symbols-outlined">contact_page</span><span class="iconLabel">#(site.t.contact)</span></a></li></ul>
+  </header>
+  #import("main")
+  <footer>
+    <a class="header" href="#(site.home)/contact">
+      <p id="copyright">© 2024 Keisuke Chinone</p>
+    </a>
+  </footer>
+  <script>
+    // Markdownのコードブロック（pre）の右上にコピーボタンを追加する
+    (function () {
+      var labels = { copy: "#(site.t.copyCode)", copied: "#(site.t.copied)" };
+      document.querySelectorAll(".markdown pre").forEach(function (pre) {
+        if (pre.querySelector(".copyButton")) return;
+        var code = pre.querySelector("code") || pre;
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "copyButton";
+        button.title = labels.copy;
+        button.setAttribute("aria-label", labels.copy);
+        var icon = document.createElement("span");
+        icon.className = "material-symbols-outlined";
+        icon.textContent = "content_copy";
+        button.appendChild(icon);
+        button.addEventListener("click", function () {
+          if (!navigator.clipboard) return;
+          navigator.clipboard.writeText(code.textContent || "").then(function () {
+            icon.textContent = "check";
+            button.title = labels.copied;
+            button.setAttribute("aria-label", labels.copied);
+            setTimeout(function () {
+              icon.textContent = "content_copy";
+              button.title = labels.copy;
+              button.setAttribute("aria-label", labels.copy);
+            }, 2000);
+          }).catch(function () {
+            // クリップボードが使えない環境では何もしない
+          });
+        });
+        pre.classList.add("hasCopyButton");
+        pre.appendChild(button);
+      });
+    })();
+  </script>
+  #if(site.loadsTwitter):<script src="https://platform.twitter.com/widgets.js" charset="utf-8" defer></script>#endif
+  #if(site.loadsBluesky):<script src="https://embed.bsky.app/static/embed.js" charset="utf-8" defer></script>#endif
+</body>
+</html>

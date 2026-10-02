@@ -1,0 +1,10 @@
+#extend("base"):
+#export("main"):
+  <main>
+    <div id="maincard">
+      <div class="card markdown">#unsafeHTML(page.html)</div>
+      #if(page.showsDonation):#extend("donation")#endif
+    </div>
+  </main>
+#endexport
+#endextend

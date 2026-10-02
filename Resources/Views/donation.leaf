@@ -1,0 +1,8 @@
+<hr>
+<h2 class="donationTitle">#(site.t.donationTitle)</h2>
+<p>#(site.t.donationBody)</p>
+<div class="donationButtons">
+  <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60"></a>
+  <a class="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal</a>
+  <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height="32" width="114"></iframe>
+</div>

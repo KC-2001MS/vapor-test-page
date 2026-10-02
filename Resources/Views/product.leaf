@@ -1,0 +1,137 @@
+#extend("base"):
+#export("main"):
+  <main>
+    <div id="maincard">
+      <div class="card">
+        <h1>#(site.t.applications)</h1>
+        #for(section in page.appSections):
+        <div class="card#if(section.isFollowing): clear#endif">
+          <h2>#(section.heading)</h2>
+          <div class="appGrid">
+            #for(app in section.apps):
+            <article class="appCard">
+              <div class="appHeader">
+                #if(app.iconURL):
+                <a href="#(app.appStoreURL)" class="appIconLink">
+                  <picture>
+                    #if(app.darkIconURL):<source srcset="#(app.darkIconURL)" media="(prefers-color-scheme: dark)">#endif
+                    <img src="#(app.iconURL)" class="appIcon" height="100" width="100" alt="#(app.iconAlt)" loading="lazy">
+                  </picture>
+                </a>
+                #endif
+                <div class="appHeading">
+                  <h3 class="appName">#(app.title)</h3>
+                  <ul class="platforms" aria-label="#(site.t.supportedPlatforms)">
+                    #for(platform in app.platforms):<li>#(platform)</li>#endfor
+                  </ul>
+                </div>
+              </div>
+              <div class="appBody">
+                <p>#unsafeHTML(app.descriptionHTML)</p>
+                #if(app.englishContactNote):<p>#(app.englishContactNote)</p>#endif
+                #if(count(app.commercials) > 0):
+                <h4>CM</h4>
+                #for(commercial in app.commercials):
+                <div>
+                  <h5>#(commercial.name)</h5>
+                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/#(commercial.url)" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="youtubeFrame" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
+                  </div>
+                </div>
+                #endfor
+                #endif
+                #if(count(app.media) > 0):
+                <h4>#(site.t.media)</h4>
+                #for(item in app.media):<p><a href="#(item.url)">#(item.title)</a></p>#endfor
+                #endif
+                #if(app.originalSource):
+                <h4>#(app.originalSource.platform)版について</h4>
+                <p>Safari拡張機能の元となっている#(app.originalSource.platform)拡張機能があります。もし、#(app.originalSource.platform)で使用したい場合は<a href="#(app.originalSource.url)">こちら</a>をご利用ください。</p>
+                <p>※#(app.originalSource.platform)版のサポートは<a href="mailto:#(app.originalSource.supportEmail)">#(app.originalSource.platform)版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
+                #endif
+              </div>
+              <div class="appFooter">
+                <div class="appLinks">
+                  <a href="#(app.supportPage)">#(site.t.supportPage)</a>
+                  <a href="#(app.feedback)">#(site.t.feedback)</a>
+                </div>
+                <div class="appActions">
+                  <p class="priceTag">#(site.t.priceLabel)<span class="price">#(app.price)</span>#(site.t.priceTaxNote)</p>
+                  <a class="appStoreLink" href="#(app.appStoreURL)">
+                    <picture>
+                      <source srcset="#(page.appStoreBadgeDark)" media="(prefers-color-scheme: dark)">
+                      <img src="#(page.appStoreBadgeLight)" alt="#(site.t.appStoreBadgeAlt)">
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </article>
+            #endfor
+          </div>
+        </div>
+        #endfor
+      </div>
+      #for(item in page.others):
+      <div class="card clear">
+        <h1>#(item.label)</h1>
+        <div class="card">
+          <h2>#(item.title)</h2>
+          #if(item.isTemplate):
+          #if(site.lang == "en"):
+          <div>#(item.description)An overview is available from the <a href="#(item.repositoryUrl)">#(item.title) repository</a>.#if(item.downloadUrl):<a href="#(item.downloadUrl)">#(site.t.download)</a>#endif</div>
+          #else:
+          <div>#(item.description)概要は<a href="#(item.repositoryUrl)">#(item.title)リポジトリ</a>からご確認ください。#if(item.downloadUrl):<p><a href="#(item.downloadUrl)">#(site.t.download)</a></p>#endif</div>
+          #endif
+          #else:
+          #if(site.lang == "en"):
+          <p>#(item.description)#if(item.moreInfoUrl):Please see the <a href="#(item.moreInfoUrl)">More about #(item.label) #(item.title)</a> for an overview.#endif</p>
+          #else:
+          <p>#(item.description)#if(item.moreInfoUrl):概要は<a href="#(item.moreInfoUrl)">#(item.label) #(item.title)【公式】</a>からご確認ください。#endif</p>
+          #endif
+          #endif
+        </div>
+      </div>
+      #endfor
+      <div class="card clear">
+        <h1>#(site.t.frameworks)</h1>
+        #for(framework in page.frameworks):
+        <div class="card">
+          <h2>#(framework.title)</h2>
+          #if(site.lang == "en"):
+          <p>#(framework.description)Please visit the <a href="#(framework.repositoryUrl)">#(framework.title) repository</a> for an overview.</p>
+          #else:
+          <p>#(framework.description)概要は<a href="#(framework.repositoryUrl)">#(framework.title)リポジトリ</a>からご確認ください。</p>
+          #endif
+        </div>
+        #endfor
+      </div>
+      <div class="card clear">
+        <h1>#(site.t.shellScripts)</h1>
+        #for(script in page.shellScripts):
+        <div class="card">
+          <h2>#(script.title)</h2>
+          #if(site.lang == "en"):
+          <div>#(script.description)An overview is available from the <a href="#(script.repositoryUrl)">#(script.title) repository</a>.#if(script.downloadUrl):<h3><a href="#(script.downloadUrl)">#(site.t.download)</a></h3>#endif</div>
+          #else:
+          <div>#(script.description)概要は<a href="#(script.repositoryUrl)">#(script.title)リポジトリ</a>からご確認ください。#if(script.downloadUrl):<a href="#(script.downloadUrl)">#(site.t.download)</a>#endif</div>
+          #endif
+        </div>
+        #endfor
+      </div>
+      <div class="card clear">
+        <h1>#(site.t.websites)</h1>
+        #for(website in page.websites):
+        <div class="card">
+          <h2>#(website.title)</h2>
+          <p>#(website.description)</p>
+        </div>
+        #endfor
+      </div>
+      #if(count(page.trademarkNotices) > 0):
+      <hr>
+      #for(notice in page.trademarkNotices):<p class="caption">#(notice)</p>#endfor
+      #endif
+    </div>
+  </main>
+#endexport
+#endextend

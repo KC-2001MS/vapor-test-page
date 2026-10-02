@@ -1,0 +1,9 @@
+#extend("base"):
+#export("main"):
+  <main>
+    <div id="maincard">
+#if(site.lang == "en"):#extend("pages/en/privacy")#else:#extend("pages/ja/privacy")#endif
+    </div>
+  </main>
+#endexport
+#endextend

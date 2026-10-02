@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* トップページ・404ページの背景と見出し */
+/* 訪問済みリンクの色（a:visited）より優先させるため、IDセレクタのまま記述している */
+
+/* 写真はページ全体（body）の背景に表示し、メイン領域は残りの高さを埋める */
+#backgroundImage {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+body:has(#backgroundImage) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Safari 26はbodyの背景色でタブバーを染める（写真は使えない）ため、写真の上端の平均色にすりガラスの暗さを重ねた色にする */
+    background-color: #60665f;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* スクロールバー用の幅を確保すると、その部分に写真が表示されないため、スクロールしないトップ・404では確保しない */
+html:has(#backgroundImage) {
+    scrollbar-gutter: auto;
+}
+
+/* その代わり、ヘッダーとフッターの右側にスクロールバーの幅だけ余白を取り、中央揃えの位置を他のページと揃える */
+/* （--scrollbarWidthはScrollbarWidthコンポーネントで設定。スクロールバーが重なって表示される環境では0px） */
+body:has(#backgroundImage) header,
+body:has(#backgroundImage) footer {
+    padding-right: var(--scrollbarWidth, 0px);
+}
+
+#goal {
+    /* 下線を一番長い行（見出し）の幅に合わせるため、中身の幅にする */
+    width: fit-content;
+    padding: clamp(32px, 8vh, 96px) clamp(24px, 6vw, 96px) 0;
+    color: var(--defaultWhite);
+    /* 写真の明るい部分でも読めるよう、柔らかく広い影を付ける */
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 見出しと副題の下に引く線（一番長い行の幅。写真になじむ控えめな色） */
+#goal::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 24px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#goalTitle {
+    margin: 0;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: bold;
+    line-height: 1.2;
+    /* 日本語の字詰め */
+    font-feature-settings: "palt";
+    letter-spacing: 0.04em;
+}
+
+.goalSubtitle {
+    margin: 16px 0 0;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.7;
+    font-feature-settings: "palt";
+    letter-spacing: 0.06em;
+    opacity: 0.92;
+}
+
+#language {
+    padding: 5px 10px;
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    color: var(--defaultWhite);
+    border-radius: 10px;
+    background-color: var(--glassBackground);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+    border: var(--glassBorder);
+}
+
+#languageItem {
+    color: var(--defaultWhite);
+}
+
+/* 縦長の写真は上端が暗い緑のため、それに合わせる */
+@media (orientation: portrait) {
+    body:has(#backgroundImage) {
+        background-color: #384038;
+    }
+}
+
+@media (max-width: 1080px) and (orientation: portrait) {
+    body:has(#backgroundImage) {
+        background-image: url(../images/出雲大社607P.avif);
+    }
+}
+
+@media (max-width: 1080px) and (orientation: landscape) {
+    body:has(#backgroundImage) {
+        background-image: url(../images/出雲大社1080.avif);
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1620px) and (orientation: portrait) {
+    body:has(#backgroundImage) {
+        background-image: image-set(
+            url(../images/出雲大社1080P.avif) 1x,
+            url(../images/出雲大社1440P.avif) 2x
+        );
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1620px) and (orientation: landscape) {
+    body:has(#backgroundImage) {
+        background-image: image-set(url(../images/出雲大社1920.avif) 1x, url(../images/出雲大社2160.avif) 2x);
+    }
+}
+
+@media (min-width: 1620px) and (max-width: 3456px) {
+    body:has(#backgroundImage) {
+        background-image: image-set(url(../images/出雲大社1920.avif) 1x, url(../images/出雲大社3456.avif) 2x);
+    }
+}
+
+@media (min-width: 3456px) {
+    body:has(#backgroundImage) {
+        background-image: image-set(url(../images/出雲大社3840.avif) 1x, url(../images/出雲大社5120.avif) 2x);
+    }
+}
+
+/* 写真の上に重ねるヘッダーとフッター（言語切り替えと同じすりガラスの見た目） */
+body:has(#backgroundImage) {
+    /* 空の明るい部分でも文字が読めるよう、少し暗めの半透明にする */
+    --glassBackground: rgba(20, 20, 20, 0.25);
+    /* ホバー・フォーカス時は少しだけ不透明にする */
+    --glassBackgroundActive: rgba(20, 20, 20, 0.4);
+    --glassBorder: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(#backgroundImage) header,
+body:has(#backgroundImage) footer {
+    background-color: var(--glassBackground);
+    /* 変数を使うとビルド時に接頭辞なしの指定が消えるため、値を直接書く */
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* 境界線はborderだと高さが増えて他のページと位置がずれるため、内側の影で描く */
+body:has(#backgroundImage) header {
+    box-shadow: inset 0 -0.5px 0 rgba(255, 255, 255, 0.2);
+}
+
+body:has(#backgroundImage) footer {
+    box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ライトモードでも写真の上の文字は白にする */
+body:has(#backgroundImage) header,
+body:has(#backgroundImage) footer,
+body:has(#backgroundImage) .header,
+body:has(#backgroundImage) .header:visited {
+    color: var(--defaultWhite);
+}
+
+body:has(#backgroundImage) .underline::after {
+    background: var(--defaultWhite);
+}
+
+/* すりガラスの部分にカーソルを合わせたとき・フォーカスしたときは不透明度を上げる */
+#language,
+body:has(#backgroundImage) header,
+body:has(#backgroundImage) footer {
+    transition: background-color 0.2s;
+}
+
+#language:hover,
+#language:focus-within,
+body:has(#backgroundImage) header:hover,
+body:has(#backgroundImage) header:focus-within,
+body:has(#backgroundImage) footer:hover,
+body:has(#backgroundImage) footer:focus-within {
+    background-color: var(--glassBackgroundActive);
+}

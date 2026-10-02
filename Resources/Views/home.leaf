@@ -1,0 +1,13 @@
+#extend("base"):
+#export("main"):
+  <main id="backgroundImage">
+    <div id="goal">
+      <h1 id="goalTitle">#(site.t.goalTitle)</h1>
+      <p class="goalSubtitle">#for(line in site.t.goalSubtitleLines):#if(!isFirst):<br>#endif#(line)#endfor</p>
+    </div>
+    <div id="language">
+      #(site.t.languageLabel) : <a id="languageItem" href="#(site.otherLanguageHome)">#(site.t.otherLanguageName)</a>
+    </div>
+  </main>
+#endexport
+#endextend

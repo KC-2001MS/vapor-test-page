@@ -1,0 +1,23 @@
+#extend("base"):
+#export("main"):
+  <main>
+    <div id="maincard">
+      <div class="card">
+        <h1>#(page.heading)</h1>
+        #if(count(page.items) == 0):
+        <p class="emptyMessage">#(page.emptyMessage)</p>
+        #else:
+        #for(item in page.items):
+        <a href="#(item.url)" class="pageCard">
+          <p class="pageCardGenre">#(item.genre)</p>
+          <h2 class="pageCardTitle">#(item.title)</h2>
+          <p class="pageCardDescription">#(item.description)</p>
+          <p class="pageCardDate">#(item.date)</p>
+        </a>
+        #endfor
+        #endif
+      </div>
+    </div>
+  </main>
+#endexport
+#endextend
